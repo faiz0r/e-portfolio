@@ -1,0 +1,178 @@
+/* all tags within my code will have a margin
+and padding of 0, this will make them not spaced
+out as much*/
+ 
+ html,
+ body,
+ h1,
+ h2,
+ h3,
+ nav,
+ div,
+ ul,
+ li {
+     margin: 0;
+     padding: 0;
+ }
+ /* Here is where the animation for my code starts*/
+ 
+ nav a {
+     position: relative;
+     display: inline-block;
+     margin: 15px 25px;
+     outline: none;
+     color: #fff;
+     text-decoration: none;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     font-weight: 400;
+     text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+     font-size: 16px;
+ }
+/* The buttons will navigate when mouse is hovering over the buttons */
+ nav a:hover,
+ nav a:focus {
+     outline: none;
+ }
+ .naveffect a {
+     padding: 12px 10px 10px;
+     color: #566473;
+     text-shadow: none;
+     font-weight: 700;
+ }
+ /*below are my before and after animations this is so that they move*/
+ .naveffect a::before,
+ .naveffect a::after {
+     position: absolute;
+     top: 100%;
+     left: 0;
+     width: 100%;
+     height: 3px;
+     background: #566473;
+     content: '';
+     /* code will also work with all of the different prefixes */
+     -webkit-transition: -webkit-transform 0.3s;
+     -moz-transition: -moz-transform 0.3s;
+     transition: transform 0.3s;
+     -webkit-transform: scale(0.85);
+     -moz-transform: scale(0.85);
+     transform: scale(0.85);
+ }
+/*before and after commands were used to create the effects on the buttons */
+ .naveffect a::after {
+     opacity: 0;
+     -webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+     -moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
+     transition: top 0.3s, opacity 0.3s, transform 0.3s;
+ }
+ .naveffect a:hover::before,
+ .naveffect a:hover::after,
+ .naveffect a:focus::before,
+ .naveffect a:focus::after {
+     -webkit-transform: scale(1);
+     -moz-transform: scale(1);
+     transform: scale(1);
+ }
+ .naveffect a:hover::after,
+ .naveffect a:focus::after {
+     top: 0%;
+     opacity: 1;
+ }
+ /* Anything within the Body tag will use the arial
+font and the padding outside */
+ 
+ html,
+ body {
+     height: 100%;
+     background: url("Images/gray.jpg");
+     background-size: 100% 120%;
+ }
+ body {} body {
+     font-family: arial;
+     padding: 15px;
+ }
+ /* All the h1 tags in the html will have an increased
+font size of 1.6 em and their colour will be light blue*/
+ 
+ h1 {
+     font-size: 1.6em;
+     color: #004a97;
+     padding-top: 10px;
+     /* All the h2 tags will have an increased size of 1.3em
+    and their color will be a light grey*/
+ }
+ h2 {
+     font-size: 1.3em;
+     color: #333333;
+     padding-top: 10px;
+ }
+ /* Border = The line that goes around the outside of the button cell
+Background-color = The color within the cell
+Display = buttons are layed out within a row not a collumn
+Padding = how big the width and height within the cell
+Border-top-left&right = the curved shape of the top right and left ends of the cell
+Float = The cells will be lined up in line towards the left within the border.*/
+ 
+ li {
+     border: 1px solid black;
+     background-color: #d5dbdf;
+     display: inline;
+     padding: 10px;
+     border-top-left-radius: 15px;
+     border-top-right-radius: 15px;
+     width: auto;
+     float: left;
+     transition: all 600ms;
+ }
+ /* When hovering the mouse over the buttons there will be
+a yellow shade that will appear.*/
+ 
+ li:hover {
+     background-color: #ffc627;
+ }
+ /* Width = How far the box reaches the edge of the browser
+Border = The thickness of the black line that goes around the  border.
+Padding = how far the text within the box reaches the edge of the box
+Margin = The box will stay in the middle of the browser.
+Background-color = The color within the box.*/
+ 
+ #container {
+     width: 80%;
+     border: solid 4px #003;
+     padding: 10px;
+     margin: 0 auto;
+     background-color: #eff1f3;
+ }
+ #navcontainer {
+	border: solid #DDDADA;
+	/*background-image: url("images/boat.png");*/
+ }
+ /* below you can see my div tags which are used to specifically fined
+ each custom tag and to edit them specifically without interfering
+ with my other code*/
+ 
+ #table1 {
+     margin: 5px auto;
+ }
+ #table2 {
+     margin: 5px auto;
+ }
+ #para {
+     padding-top: 0px;
+ }
+ #image {
+     text-align: center;
+     width: 100;
+     height: 200;
+ }
+ #center {
+     text-align: center;
+ }
+ #imgtag img {
+     width: 419px;
+     height: 215px;
+     margin: 10px 10px;
+ }
+ #imgtag {
+     text-align: center;
+ }

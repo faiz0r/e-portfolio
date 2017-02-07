@@ -1,0 +1,174 @@
+/* these are the shapes in which the buttons will be using */
+
+.hellocircle,
+.circle2,
+.circle3 {
+    border-radius: 50px;
+    background-color: blue;
+    width: 100px;
+    text-align: center;
+    display: inline-block;
+}
+/* the animation will activate when the cursor is hovering over the button */
+
+.hellocircle:hover,
+.hellocircle:focus,
+.hellocircle:active {
+    -moz-animation: spin 2s;
+    -webkit-animation: spin 2s;
+    -o-animation: spin 2s;
+    /* Opera 12+ */
+    
+    animation: spin 2s;
+}
+/* circle 2 will activate when hovering over the image and also below you can
+see all of the different brower prefixes */
+
+.circle2:hover {
+    -moz-animation: troll 2s;
+    /*Mozilla Firefox*/
+    
+    -webkit-animation: troll 2s;
+    /* Chrome */
+    
+    -o-animation: troll 2s;
+    /* Opera*/
+    
+    animation: troll 2s;
+    /* Internet Explorer */
+}
+/* circle 3 will also activate when hovering over the cells*/
+
+.circle3:hover {
+    -moz-animation-name: upanddown;
+    -moz-animation-duration: upanddown 5s;
+    -moz-animation: upanddown 5s;
+    -webkit-animation: upanddown 5s;
+    -o-animation: upanddown 5s;
+    /* Opera 12+ */
+    
+    animation: upanddown 5s;
+}
+/* below are the many different types of codes that will be used to have the different
+animations work in the differnet browsers */
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@-o-keyframes spin {
+    from {
+        -o-transform: rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes troll {
+    from {
+        -moz-transform: translateX(50%);
+    }
+    50% {
+        -moz-transform: translateX(-50%);
+    }
+    to {
+        -moz-transform: translateX(0%);
+    }
+}
+@-webkit-keyframes troll {
+    from {
+        -webkit-transform: translateX(50%);
+    }
+    50% {
+        -webkit-transform: translateX(-50%);
+    }
+    to {
+        -webkit-transform: translateX(0%);
+    }
+}
+@-o-keyframes troll {
+    from {
+        -o-transform: translateX(50%);
+    }
+    50% {
+        -o-transform: translateX(-50%);
+    }
+    to {
+        -o-transform: translateX(0%);
+    }
+}
+@keyframes troll {
+    from {
+        transform: translateX(50%);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+@-moz-keyframes upanddown {
+    from {
+        -moz-transform: translateY(50%);
+    }
+    50% {
+        -moz-transform: translateY(-50%);
+    }
+    to {
+        -moz-transform: translateY(0%);
+    }
+}
+@-webkit-keyframes upanddown {
+    from {
+        -webkit-transform: translateY(50%);
+    }
+    50% {
+        -webkit-transform: translateY(-50%);
+    }
+    to {
+        -webkit-transform: translateY(0%);
+    }
+}
+@keyframes upanddown {
+    from {
+        transform: translateY(50%);
+    }
+    50% {
+        transform: translateY(-50%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+@-o-keyframes upanddown {
+    from {
+        transform: translateY(50%);
+    }
+    50% {
+        transform: translateY(-50%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
